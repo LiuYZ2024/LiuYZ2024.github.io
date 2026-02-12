@@ -35,9 +35,9 @@ const ResearchCard: React.FC<{ item: Research; index: number }> = ({ item, index
 
       <div className="p-6 flex-1 relative">
         {/* Decorative gradient blob */}
-        <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-500/10 rounded-full blur-2xl group-hover:bg-primary-500/20 transition-all"></div>
+        <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary-500/10 rounded-full blur-2xl group-hover:bg-primary-500/20 transition-all -z-10"></div>
 
-      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4 relative z-10">
         <div className="flex-1">
           <div className="flex flex-wrap items-center gap-2 mb-2">
             {item.publication && (
