@@ -130,7 +130,7 @@ const DATA_EN: Content = {
         "Managed the GitHub repository and project documentation."
       ],
       tags: ["Jittor", "3D Vision", "Skeleton Rigging"],
-      imageUrl: "/images/research/jittor.gif"
+      imageUrl: "/images/research/jittor.mp4"
     },
     {
       title: "Real-time Long-Sequence Human-Human Interaction Generation from Text",
@@ -158,7 +158,7 @@ const DATA_EN: Content = {
         "Visualization Tools (Wis3D)",
         "Motion Rep Conversion"
       ],
-      imageUrl: "/images/projects/SDUerHuman.gif"
+      imageUrl: "/images/projects/SDUerHuman.mp4"
     },
     {
       title: "Valentine's Forest Adventure",
@@ -167,7 +167,7 @@ const DATA_EN: Content = {
       description: "A 3D adventure game built in Unity. Players navigate a forest, collect energy orbs, avoid monsters, and unlock the 'Love Gate'.",
       techStack: ["Unity", "C#", "Game Design"],
       highlights: ["3D Environment Design", "Pathfinding & Logic", "Particle Effects"],
-      imageUrl: "/images/projects/forest.gif"
+      imageUrl: "/images/projects/forest.mp4"
     },
 
 
@@ -187,7 +187,7 @@ const DATA_EN: Content = {
       description: "Intelligent vehicle with tracking, obstacle avoidance, and gesture recognition controlled via Android app.",
       techStack: ["Raspberry Pi", "Android", "CV"],
       highlights: ["Gesture Recognition", "Hardware Control"],
-      imageUrl: "/images/projects/car.gif"
+      imageUrl: "/images/projects/car.mp4"
     },
     {
       title: "GraphChain",
@@ -280,7 +280,7 @@ const DATA_ZH: Content = {
         "负责Github仓库建设与文档编写。"
       ],
       tags: ["Jittor", "三维视觉", "骨骼绑定"],
-      imageUrl: "/images/research/jittor.gif"
+      imageUrl: "/images/research/jittor.mp4"
     },
     {
       title: "文本条件下的长序列人际交互动作实时生成",
@@ -308,7 +308,7 @@ const DATA_ZH: Content = {
         "Wis3D可视化脚本",
         "动作格式转换工具"
       ],
-      imageUrl: "/images/projects/SDUerHuman.gif"
+      imageUrl: "/images/projects/SDUerHuman.mp4"
     },
     {
       title: "情人节森林大冒险",
@@ -317,7 +317,7 @@ const DATA_ZH: Content = {
       description: "基于Unity开发的3D冒险游戏。玩家在森林中沿指定路线收集能量球，躲避小怪兽，最终打开恋爱大门。",
       techStack: ["Unity", "C#", "游戏设计"],
       highlights: ["3D场景搭建", "寻路算法", "粒子特效"],
-      imageUrl: "/images/projects/forest.gif"
+      imageUrl: "/images/projects/forest.mp4"
     },
     {
       title: "全栈博客平台",
@@ -335,7 +335,7 @@ const DATA_ZH: Content = {
       description: "具备循迹、避障、手势识别功能的智能小车，配套Android控制APP。",
       techStack: ["树莓派", "Android", "CV"],
       highlights: ["手势识别算法", "移动端控制"],
-      imageUrl: "/images/projects/car.gif"
+      imageUrl: "/images/projects/car.mp4"
     },
     {
       title: "GraphChain",

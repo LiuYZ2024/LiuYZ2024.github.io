@@ -12,17 +12,30 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         : 'border-slate-200 dark:border-slate-700/50 hover:border-primary-500/50 dark:hover:bg-slate-800/80'
       }
     `}>
-      {/* Image Preview Section - Left side on desktop */}
+      {/* Image/Video Preview Section - Left side on desktop */}
       {project.imageUrl && !isComingSoon && (
         <div className="md:w-80 flex-shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-4 flex items-center justify-center">
-           <img 
-             src={project.imageUrl} 
-             alt={project.title} 
-             className="w-full h-auto object-contain rounded-lg transition-transform duration-500 hover:scale-105"
-             onError={(e) => {
-               (e.target as HTMLImageElement).style.display = 'none';
-             }}
-           />
+           {project.imageUrl.endsWith('.mp4') || project.imageUrl.endsWith('.webm') ? (
+             <video
+               autoPlay
+               loop
+               muted
+               playsInline
+               className="w-full h-auto object-contain rounded-lg transition-transform duration-500 hover:scale-105"
+             >
+               <source src={project.imageUrl} type={project.imageUrl.endsWith('.mp4') ? 'video/mp4' : 'video/webm'} />
+               您的浏览器不支持视频标签。
+             </video>
+           ) : (
+             <img 
+               src={project.imageUrl} 
+               alt={project.title} 
+               className="w-full h-auto object-contain rounded-lg transition-transform duration-500 hover:scale-105"
+               onError={(e) => {
+                 (e.target as HTMLImageElement).style.display = 'none';
+               }}
+             />
+           )}
         </div>
       )}
 

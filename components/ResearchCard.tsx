@@ -6,17 +6,30 @@ const ResearchCard: React.FC<{ item: Research; index: number }> = ({ item, index
   return (
     <div className="flex flex-col md:flex-row bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:border-primary-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 group relative">
         
-      {/* Image Preview Section - Left side on desktop */}
+      {/* Image/Video Preview Section - Left side on desktop */}
       {item.imageUrl && (
         <div className="md:w-96 flex-shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-6 flex items-center justify-center">
-           <img 
-             src={item.imageUrl} 
-             alt={item.title} 
-             className="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-105"
-             onError={(e) => {
-               (e.target as HTMLImageElement).style.display = 'none';
-             }}
-           />
+           {item.imageUrl.endsWith('.mp4') || item.imageUrl.endsWith('.webm') ? (
+             <video
+               autoPlay
+               loop
+               muted
+               playsInline
+               className="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-105"
+             >
+               <source src={item.imageUrl} type={item.imageUrl.endsWith('.mp4') ? 'video/mp4' : 'video/webm'} />
+               您的浏览器不支持视频标签。
+             </video>
+           ) : (
+             <img 
+               src={item.imageUrl} 
+               alt={item.title} 
+               className="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-105"
+               onError={(e) => {
+                 (e.target as HTMLImageElement).style.display = 'none';
+               }}
+             />
+           )}
         </div>
       )}
 
