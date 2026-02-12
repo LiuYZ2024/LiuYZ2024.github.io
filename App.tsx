@@ -92,7 +92,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-             <a href={`mailto:${content.personalInfo.email}`} className="flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-lg shadow-primary-500/20">
+             <a href="#contact" className="flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-lg shadow-primary-500/20">
                 <Mail size={18} /> {content.personalInfo.contactBtn}
              </a>
              <a href={content.personalInfo.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-white px-6 py-3 rounded-lg font-medium transition-all border border-slate-200 dark:border-slate-700">
